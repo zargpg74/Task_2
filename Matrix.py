@@ -13,17 +13,12 @@ def Matrix(n):
     for x in list(zip(*arr)):
         print(*x)
 
-try:
-    k = int(input("Введите число: "))
-except ValueError:
-    print("Число не целое")
-    exit(k)
-else:
-    if k < 4 or k > 1000:
-        print("Число меньше 4 или больше 1000")
-        exit(k)
-
+k = int(input("Введите число: "))
+if k<4 or k>1000:
+    print("Число не подходит указанному диапазону")
+    exit(1)
 Matrix(k)
+
 
 
 
